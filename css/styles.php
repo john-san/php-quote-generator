@@ -1,4 +1,3 @@
-/* Random Quote Generator Styles */
 <?php header("Content-type: text/css"); 
 
 // Return random rgb string.  Values kept under 128 to have better contrast w/ white text
@@ -28,7 +27,7 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  padding: 0 1.5%;
+  padding: 0 2.5%;
 }
 
 #quote-box {

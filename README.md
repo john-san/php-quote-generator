@@ -2,7 +2,7 @@
 
 ## Unit 1 Project: Random Quote Generator
 
-**Summary:** This is a random quote generator that I built using PHP.  Users can either click the 'show another quote' button or wait 20 seconds to view a new random quote. 
+**Summary:** This is a random quote generator that was built with PHP.  Users can either click the 'show another quote' button or wait 20 seconds to view a new random quote. 
 
 This project helped me practice the fundamental PHP syntax and better understand how PHP can be used in conjunction HTML and CSS files.  Furthermore, I learned how to use XAMPP to spin up a local server and serve PHP files.
 

@@ -1,22 +1,46 @@
 /* Random Quote Generator Styles */
+<?php header("Content-type: text/css"); 
+
+// Return random rgb string.  Values kept under 128 to have better contrast w/ white text
+function getRandomColor() {
+  $r = rand(0,128);
+  $g = rand(0,128);
+  $b = rand(0,128);
+  return "rgb($r, $g, $b)";
+}
+
+$randomColor = getRandomColor();
+
+?>
+
+
 
 body {
-  background-color: #36b55c;
+  background-color: <?php echo $randomColor ?>;
   color: white;
   font-family: 'Playfair Display', serif;
+  height: 85vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.5%;
 }
 
 #quote-box {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  right: 10%;
-  width: 80%;
   line-height: .5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .quote {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 1.1;
   position: relative;
@@ -24,9 +48,9 @@ body {
 }
 
 .quote:before, .quote:after {
-  font-size: 6rem;
+  font-size: 3rem;
   line-height: 2.5rem;
-  position: absolute;
+  
 }
 
 .quote:before {
@@ -68,17 +92,20 @@ body {
   font-style: normal;
 }
 
+.tag {
+  border-radius: 4px;
+  border: 2px solid #fff;
+  padding: 4px 8px;
+}
+
 #loadQuote {
-  position: fixed;
   width: 12em;
   display: inline-block;
-  left: 50%;
-  margin-left: -6em;
   bottom: 150px;
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: <?php echo $randomColor ?>;
   padding: 15px 0;
   transition: .5s ;
 }
